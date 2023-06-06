@@ -1,3 +1,6 @@
+let computerScore = 0;
+let userScore = 0; 
+
 function getComputerChoice()
 {
     const rockPaperScissors = ["Rock", "Paper", "Scissors"];
@@ -23,26 +26,32 @@ function round(computerChoice, userChoice)
     }
     else if (computerChoice === "rock" && userChoice === "scissors")
     {
+        computerScore++;
         return `You lose! ${computerChoice} beats ${userChoice}`;
     }
     else if (computerChoice === "rock" && userChoice === "paper")
     {
+        userScore++;
         return use`You win! ${userChoice} beats ${computerChoice}`;
     }
     else if (computerChoice === "paper" && userChoice === "rock")
     {
+        computerScore++;
         return `You lose! ${computerChoice} beats ${userChoice}`;
     }
     else if (computerChoice === "paper" && userChoice === "scissors")
     {
+        userScore++;
         return use`You win! ${userChoice} beats ${computerChoice}`;
     }
     else if (computerChoice === "scissors" && userChoice === "rock")
     {
+        userScore++;
         return use`You win! ${userChoice} beats ${computerChoice}`;
     }
     else if (computerChoice === "scissors" && userChoice === "paper")
     {
+        computerScore++;
         return `You lose! ${computerChoice} beats ${userChoice}`;
     }
     else
