@@ -7,6 +7,15 @@ function getComputerChoice()
     return rockPaperScissors[randomChoice];
 }
 
-const computerChoice = getComputerChoice;
+function getUserChoice()
+{
+    return prompt();
+}
 
-console.log(computerChoice());
+const computerChoice = getComputerChoice().toLowerCase();
+const userChoice = getUserChoice().toLowerCase();
+
+function round(computerChoice, userChoice)
+{
+
+}
