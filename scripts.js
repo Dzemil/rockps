@@ -60,4 +60,10 @@ function round(computerChoice, userChoice)
     }
 }
 
-console.log(round(computerChoice,userChoice));
+function game()
+{
+    for (let i = 0; i < 5; i++)
+    {
+        round(computerChoice, userChoice);
+    }
+}
