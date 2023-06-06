@@ -1,0 +1,47 @@
+[33mcommit fbb0d9828915df8af034245af3b4d87f0c2c75a0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Dzemil <dzemilpapic5@gmail.com>
+Date:   Tue Jun 6 17:07:19 2023 +0200
+
+    something is broken
+
+[33mcommit 967a459a8e32ed92b4155da26f00a222076c31e7[m
+Author: Dzemil <dzemilpapic5@gmail.com>
+Date:   Tue Jun 6 17:00:12 2023 +0200
+
+    keeping scores
+
+[33mcommit e8cf9005e8b17f20dbbbb19596eb991a0630549e[m
+Author: Dzemil <dzemilpapic5@gmail.com>
+Date:   Tue Jun 6 16:47:29 2023 +0200
+
+    added round functionality
+
+[33mcommit 18d489d5781283934caa4776cd14845cbaab056b[m
+Author: Dzemil <dzemilpapic5@gmail.com>
+Date:   Tue Jun 6 16:27:56 2023 +0200
+
+    update README
+
+[33mcommit c00883030fadf88b00bde43a8a2bdf700fafa001[m
+Author: Dzemil <dzemilpapic5@gmail.com>
+Date:   Tue Jun 6 16:24:19 2023 +0200
+
+    added user input
+
+[33mcommit f3421891e12ff64ebd0f524072a4588244655e90[m
+Author: Dzemil <dzemilpapic5@gmail.com>
+Date:   Tue Jun 6 16:12:18 2023 +0200
+
+    added coputerChoice function
+
+[33mcommit ebe2e3bdc9f3efe0c4e7640726634b0d6002d7f2[m
+Author: Dzemil <dzemilpapic5@gmail.com>
+Date:   Tue Jun 6 15:58:19 2023 +0200
+
+    basic structure
+
+[33mcommit 2366f2f40e602b1db20a53b64c8857d1f2796291[m
+Author: Dzemil <dzemilpapic5@gmail.com>
+Date:   Tue Jun 6 15:22:38 2023 +0200
+
+    initial commit

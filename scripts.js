@@ -59,11 +59,14 @@ function round(computerChoice, userChoice)
         return "Check your imput";
     }
 }
+console.log(computerScore, userScore);
 
+/*
 function game()
 {
     for (let i = 0; i < 5; i++)
     {
-        round(computerChoice, userChoice);
+        round();
     }
 }
+*/
