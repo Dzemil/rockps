@@ -42,5 +42,17 @@ for(let i = 0; i < 5; i++)
         }
     }
     console.log(round(computerChoice,userChoice));
-    console.log(computerScore,userScore);
+}
+
+if (computerScore > userScore)
+{
+    console.log("The computer won!")
+}
+else if (userScore < computerScore)
+{
+    console.log("The user won!")
+}
+else
+{
+    console.log("It's a draw somehow!")
 }
