@@ -7,6 +7,8 @@ function getComputerChoice()
     return rockPaperScissors[randomChoice];
 }
 
+let computerScore = 0;
+let userScore = 0;
 
 
 for(let i = 0; i < 5; i++)
@@ -24,12 +26,14 @@ for(let i = 0; i < 5; i++)
                  (computerChoice === "paper" && userChoice === "rock")    ||
                  (computerChoice === "scissors" && userChoice === "paper"))
         {
+            computerScore++;
             return `You lose! ${computerChoice} beats ${userChoice}`;
         }
         else if ((computerChoice === "rock" && userChoice === "paper")     ||
                  (computerChoice === "paper" && userChoice === "scissors") ||
                  (computerChoice === "scissors" && userChoice === "rock"))
         {
+            userScore++;
             return `You win! ${userChoice} beats ${computerChoice}`;
         }
         else
@@ -38,4 +42,5 @@ for(let i = 0; i < 5; i++)
         }
     }
     console.log(round(computerChoice,userChoice));
+    console.log(computerScore,userScore);
 }
