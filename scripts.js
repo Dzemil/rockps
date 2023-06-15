@@ -10,49 +10,31 @@ function getComputerChoice()
 let computerScore = 0;
 let userScore = 0;
 
+const computerChoice = getComputerChoice().toLowerCase();
+const userChoice = prompt().toLowerCase();
 
-for(let i = 0; i < 5; i++)
+function round(computerChoice, userChoice)
 {
-    const computerChoice = getComputerChoice().toLowerCase();
-    const userChoice = prompt().toLowerCase();
-
-    function round(computerChoice, userChoice)
+    if (computerChoice === userChoice)
     {
-        if (computerChoice === userChoice)
-        {
-            return "It's a draw";
-        }
-        else if ((computerChoice === "rock" && userChoice === "scissors") ||
-                 (computerChoice === "paper" && userChoice === "rock")    ||
-                 (computerChoice === "scissors" && userChoice === "paper"))
-        {
-            computerScore++;
-            return `You lose! ${computerChoice} beats ${userChoice}`;
-        }
-        else if ((computerChoice === "rock" && userChoice === "paper")     ||
-                 (computerChoice === "paper" && userChoice === "scissors") ||
-                 (computerChoice === "scissors" && userChoice === "rock"))
-        {
-            userScore++;
-            return `You win! ${userChoice} beats ${computerChoice}`;
-        }
-        else
-        {
-            return "Check your imput";
-        }
+        return "It's a draw";
     }
-    console.log(round(computerChoice,userChoice));
-}
-
-if (computerScore > userScore)
-{
-    console.log("The computer won!")
-}
-else if (userScore < computerScore)
-{
-    console.log("The user won!")
-}
-else
-{
-    console.log("It's a draw somehow!")
+    else if ((computerChoice === "rock" && userChoice === "scissors") ||
+                (computerChoice === "paper" && userChoice === "rock")    ||
+                (computerChoice === "scissors" && userChoice === "paper"))
+    {
+        computerScore++;
+        return `You lose! ${computerChoice} beats ${userChoice}`;
+    }
+    else if ((computerChoice === "rock" && userChoice === "paper")     ||
+                (computerChoice === "paper" && userChoice === "scissors") ||
+                (computerChoice === "scissors" && userChoice === "rock"))
+    {
+        userScore++;
+        return `You win! ${userChoice} beats ${computerChoice}`;
+    }
+    else
+    {
+        return "Check your imput";
+    }
 }
