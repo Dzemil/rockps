@@ -11,7 +11,12 @@ let computerScore = 0;
 let userScore = 0;
 
 const computerChoice = getComputerChoice().toLowerCase();
-const userChoice = prompt().toLowerCase();
+let userChoice;
+const rock = document.querySelector('#rock');
+
+rock.addEventListener('click', () => {
+    userChoice = 'rock';
+});
 
 function round(computerChoice, userChoice)
 {
@@ -38,3 +43,4 @@ function round(computerChoice, userChoice)
         return "Check your imput";
     }
 }
+
