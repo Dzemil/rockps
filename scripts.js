@@ -11,6 +11,7 @@ let computerScore = 0;
 let userScore = 0;
 
 const computerChoice = getComputerChoice().toLowerCase();
+const container = document.querySelector('.container');
 const rock = document.querySelector('#rock');
 
 // display result
@@ -24,6 +25,7 @@ resultContainer.appendChild(result);
 rock.addEventListener('click', () => {
     const userChoice = 'rock';
     round(computerChoice,userChoice);
+    container.appendChild(resultContainer);
 });
 
 
