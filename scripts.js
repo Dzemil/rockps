@@ -11,36 +11,44 @@ let computerScore = 0;
 let userScore = 0;
 
 const computerChoice = getComputerChoice().toLowerCase();
-let userChoice;
 const rock = document.querySelector('#rock');
 
+// display result
+const resultContainer = document.createElement('div');
+resultContainer.classList.add('resultContainer');
+
+const result = document.createElement('p');
+resultContainer.appendChild(result);
+
+
 rock.addEventListener('click', () => {
-    userChoice = 'rock';
+    const userChoice = 'rock';
+    round(computerChoice,userChoice);
 });
+
+
 
 function round(computerChoice, userChoice)
 {
     if (computerChoice === userChoice)
     {
-        return "It's a draw";
+        return result.textContent = "It's a draw";
     }
     else if ((computerChoice === "rock" && userChoice === "scissors") ||
                 (computerChoice === "paper" && userChoice === "rock")    ||
                 (computerChoice === "scissors" && userChoice === "paper"))
     {
-        computerScore++;
-        return `You lose! ${computerChoice} beats ${userChoice}`;
+        return result.textContent = `You lose! ${computerChoice} beats ${userChoice}`;
     }
     else if ((computerChoice === "rock" && userChoice === "paper")     ||
                 (computerChoice === "paper" && userChoice === "scissors") ||
                 (computerChoice === "scissors" && userChoice === "rock"))
     {
-        userScore++;
-        return `You win! ${userChoice} beats ${computerChoice}`;
+        return result.textContent = `You win! ${userChoice} beats ${computerChoice}`;
     }
     else
     {
-        return "Check your imput";
+        return result.textContent = "Check your imput";
     }
 }
 
