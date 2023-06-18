@@ -12,6 +12,8 @@ let userScore = 0;
 
 const container = document.querySelector('.container');
 const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
 
 // container for result text
 const resultContainer = document.createElement('div');
@@ -20,7 +22,7 @@ container.appendChild(resultContainer);
 const result = document.createElement('p');
 
 
-
+// computing score on rock button press
 rock.addEventListener('click', () => {
     let computerChoice = getComputerChoice().toLowerCase();
     const userChoice = 'rock';
@@ -29,6 +31,23 @@ rock.addEventListener('click', () => {
     resultContainer.appendChild(result);
 });
 
+paper.addEventListener('click', () => {
+    let computerChoice = getComputerChoice().toLowerCase();
+    const userChoice = 'paper';
+
+    round(computerChoice, userChoice);
+    resultContainer.appendChild(result);
+
+});
+
+scissors.addEventListener('click', () => {
+    let computerChoice = getComputerChoice().toLowerCase();
+    const userChoice = 'scissors';
+
+    round(computerChoice, userChoice);
+    resultContainer.appendChild(result);
+
+});
 
 
 function round(computerChoice, userChoice)
