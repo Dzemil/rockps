@@ -7,6 +7,7 @@ function getComputerChoice()
     return rockPaperScissors[randomChoice];
 }
 
+const rounds = 5;
 let computerScore = 0;
 let userScore = 0;
 
@@ -56,16 +57,18 @@ function round(computerChoice, userChoice)
     {
         return result.textContent = "It's a draw";
     }
-    else if ((computerChoice === "rock" && userChoice === "scissors") ||
+    else if ((computerChoice === "rock" && userChoice === "scissors")    ||
                 (computerChoice === "paper" && userChoice === "rock")    ||
                 (computerChoice === "scissors" && userChoice === "paper"))
     {
+        computerScore++;
         return result.textContent = `You lose! ${computerChoice} beats ${userChoice}`;
     }
     else if ((computerChoice === "rock" && userChoice === "paper")     ||
                 (computerChoice === "paper" && userChoice === "scissors") ||
                 (computerChoice === "scissors" && userChoice === "rock"))
     {
+        userScore++;
         return result.textContent = `You win! ${userChoice} beats ${computerChoice}`;
     }
     else
