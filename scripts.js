@@ -10,22 +10,23 @@ function getComputerChoice()
 let computerScore = 0;
 let userScore = 0;
 
-const computerChoice = getComputerChoice().toLowerCase();
 const container = document.querySelector('.container');
 const rock = document.querySelector('#rock');
 
-// display result
+// container for result text
 const resultContainer = document.createElement('div');
 resultContainer.classList.add('resultContainer');
-
+container.appendChild(resultContainer);
 const result = document.createElement('p');
-resultContainer.appendChild(result);
+
 
 
 rock.addEventListener('click', () => {
+    let computerChoice = getComputerChoice().toLowerCase();
     const userChoice = 'rock';
-    round(computerChoice,userChoice);
-    container.appendChild(resultContainer);
+
+    round(computerChoice, userChoice);
+    resultContainer.appendChild(result);
 });
 
 
