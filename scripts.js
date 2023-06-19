@@ -72,6 +72,7 @@ function round(computerChoice, userChoice) {
 function playRound(userChoice) {
     // limit rounds to 5
     if (currentRound === rounds) {
+        result.textContent = "This is the final score";
         return
     }
 
