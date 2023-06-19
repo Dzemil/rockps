@@ -67,9 +67,11 @@ function round(computerChoice, userChoice) {
 }
 
 function playRound(userChoice) {
+    // limit rounds to 5
     if (currentRound === rounds) {
         return
     }
+    
     // handling button press
     let computerChoice = getComputerChoice().toLowerCase();
     round(computerChoice, userChoice);
