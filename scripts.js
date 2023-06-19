@@ -26,27 +26,19 @@ result.style.textAlign = 'center';
 
 // computing score on rock button press
 rock.addEventListener('click', () => {
-    let computerChoice = getComputerChoice().toLowerCase();
     const userChoice = 'rock';
-
-    round(computerChoice, userChoice);
-    resultContainer.appendChild(result);
+    playRound(userChoice);
 });
 
 paper.addEventListener('click', () => {
-    let computerChoice = getComputerChoice().toLowerCase();
     const userChoice = 'paper';
+    playRound(userChoice);
 
-    round(computerChoice, userChoice);
-    resultContainer.appendChild(result);
 });
 
 scissors.addEventListener('click', () => {
-    let computerChoice = getComputerChoice().toLowerCase();
     const userChoice = 'scissors';
-
-    round(computerChoice, userChoice);
-    resultContainer.appendChild(result);
+    playRound(userChoice);
 });
 
 
@@ -73,4 +65,16 @@ function round(computerChoice, userChoice) {
         return result.textContent = "Check your imput";
     }
 }
+
+function playRound(userChoice) {
+    if (currentRound === rounds) {
+        return
+    }
+    // handling button press
+    let computerChoice = getComputerChoice().toLowerCase();
+    round(computerChoice, userChoice);
+    resultContainer.appendChild(result);
+
+
+};
 
