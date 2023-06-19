@@ -23,6 +23,9 @@ document.body.appendChild(resultContainer);
 const result = document.createElement('p');
 result.style.textAlign = 'center';
 
+// score variables
+const userScoreElement = document.querySelector('#userScore');
+const computerScoreElement = document.querySelector('#computerScore');
 
 // computing score on rock button press
 rock.addEventListener('click', () => {
@@ -71,12 +74,24 @@ function playRound(userChoice) {
     if (currentRound === rounds) {
         return
     }
-    
+
     // handling button press
     let computerChoice = getComputerChoice().toLowerCase();
     round(computerChoice, userChoice);
     resultContainer.appendChild(result);
 
+    for (let i = 0; i <= currentRound; i++) {
+        let computerScoreChecker = 0;
+        let userScoreChecker = 0;
+
+        if (computerScoreChecker != computerScore) {
+            computerScoreElement.innerHTML = computerScore;
+        }
+
+        if (userScoreChecker != userScore) {
+            userScoreElement.innerHTML = userScore;
+        }
+    }
 
 };
 
