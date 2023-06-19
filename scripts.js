@@ -1,5 +1,4 @@
-function getComputerChoice()
-{
+function getComputerChoice() {
     const rockPaperScissors = ["Rock", "Paper", "Scissors"];
 
     let randomChoice = Math.floor(Math.random() * rockPaperScissors.length);
@@ -8,6 +7,7 @@ function getComputerChoice()
 }
 
 const rounds = 5;
+let currentRound = 0;
 let computerScore = 0;
 let userScore = 0;
 
@@ -19,8 +19,9 @@ const scissors = document.querySelector('#scissors');
 // container for result text
 const resultContainer = document.createElement('div');
 resultContainer.classList.add('resultContainer');
-container.appendChild(resultContainer);
+document.body.appendChild(resultContainer);
 const result = document.createElement('p');
+result.style.textAlign = 'center';
 
 
 // computing score on rock button press
@@ -38,7 +39,6 @@ paper.addEventListener('click', () => {
 
     round(computerChoice, userChoice);
     resultContainer.appendChild(result);
-
 });
 
 scissors.addEventListener('click', () => {
@@ -47,32 +47,29 @@ scissors.addEventListener('click', () => {
 
     round(computerChoice, userChoice);
     resultContainer.appendChild(result);
-
 });
 
 
-function round(computerChoice, userChoice)
-{
-    if (computerChoice === userChoice)
-    {
+function round(computerChoice, userChoice) {
+    if (computerChoice === userChoice) {
+        currentRound++;
         return result.textContent = "It's a draw";
     }
     else if ((computerChoice === "rock" && userChoice === "scissors")    ||
                 (computerChoice === "paper" && userChoice === "rock")    ||
-                (computerChoice === "scissors" && userChoice === "paper"))
-    {
+                (computerChoice === "scissors" && userChoice === "paper")) {
         computerScore++;
+        currentRound++;
         return result.textContent = `You lose! ${computerChoice} beats ${userChoice}`;
     }
     else if ((computerChoice === "rock" && userChoice === "paper")     ||
                 (computerChoice === "paper" && userChoice === "scissors") ||
-                (computerChoice === "scissors" && userChoice === "rock"))
-    {
+                (computerChoice === "scissors" && userChoice === "rock")) {
         userScore++;
+        currentRound++;
         return result.textContent = `You win! ${userChoice} beats ${computerChoice}`;
     }
-    else
-    {
+    else {
         return result.textContent = "Check your imput";
     }
 }
